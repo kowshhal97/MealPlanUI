@@ -1,0 +1,54 @@
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.paypal {
+  &-logo {
+    font-family: Verdana, Tahoma;
+    font-weight: bold;
+    font-size: 26px;
+
+    i:first-child {
+      color: #253b80;
+    }
+
+    i:last-child {
+      color: #179bd7;
+    }
+  }
+  
+  &-button {
+    padding: 4px 40px 7px;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    background-image: linear-gradient(#f3f4f7, #ced2d5);
+    margin: 0 auto;
+    display: block;
+    min-width: 138px;
+    position: relative;
+    &:hover{
+  background-image: linear-gradient(#bdbec1, #858b8e);
+    }
+    
+    &-title {
+      font-size: 14px;
+      color: #171717;
+      font-weight: bold;
+      vertical-align: text-top;
+      line-height: 8px;
+      xtext-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    }
+    
+    .paypal-logo {
+      display: inline-block;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+<div class="img"><section class="about-area pt-60">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 mb-60">
+                  <div class="section-title text-center">
+                     <h4 > our menu</h4>
+                  </div>
+               </div>
+            </div>
+            <div class="row menu_style1">
+               <!-- <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-6.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                     </div>
+                  </div>
+               </div> -->
+
+               <div class="col-md-4" *ngFor="let chk of checkBox; let i = index">
+                     <div class="single_menu_list">
+                           <img [src]="chk.src" alt="">
+                           <div class="menu_content">
+                              <h4>{{chk.name}} </h4>
+                              <input [(ngModel)]="chk.checked" type="checkbox" [disabled]="!chk.checked && maxNo" (change)="onChange($event.target.checked)" style=" top: -3.2em; position: relative; left: -3em; ">
+                           </div>
+                        </div>
+                  </div>
+
+            </div>
+         </div>
+         <div class="text-center" *ngIf="maxNo">
+               <p style="font-weight:bold;">{{num}} meals chosen. Are you sure about your choices?</p>
+               <button (click)="proceed()">Proceed</button>
+            </div>
+      </section>
+   </div>
+
+
